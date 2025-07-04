@@ -1,0 +1,128 @@
+.container_portfolio{
+    max-width: 80%;
+    color: var(--cor-branco);
+    min-height: 600px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    width: 100%
+}
+
+.grid-item {
+    color: var(--cor-branco);
+    min-height: 200px;
+    position: relative; 
+    border: 1px solid var(--cor-branco);
+    padding: 2%;
+    font-size: var(--tamanho-fonte-desktop-botoes-grande);
+    border-radius: 25px;
+    text-align: left;
+    transition: background-color 1s,transform 0.5s;
+}
+
+.grid-item h6,
+.grid-item span{
+    font-size: var(--tamanho-fonte-desktop-botoes-pequeno);
+    color: var(--cor-branco-opaco);
+    position: absolute;
+    bottom: 2%;
+    margin: 0;
+}
+
+.grid-item h6{
+    right: 5%; 
+}
+
+.grid-item span{
+    left: 5%;
+}
+
+.grid-item:hover{
+    transform: scale(1.05); 
+}
+
+
+.project-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.tech-stack {
+    font-size: 0.75rem;
+    color: var(--cor-branco-opaco);
+    margin-bottom: 8px;
+}
+
+
+.learn-more {
+    font-size: var(--tamanho-fonte-desktop-botoes-pequeno);
+    color: var(--cor-branco);
+    text-decoration: underline;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.grid-item h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--cor-branco);
+    font-weight: 600;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.project-links {
+    font-size: 0.8rem;
+    color: var(--cor-branco-opaco);
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.project-links a.learn-more {
+    font-size: 0.85rem;
+    color: var(--cor-branco);
+    text-decoration: underline;
+}
+
+
+@media (max-width: 700px) {
+    .container_portfolio {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
+    .container_filtro {
+        margin: 2%;
+    }
+
+    .grid-container {
+        grid-template-columns: auto;
+        padding: 0;
+    }
+
+    .grid-item {
+        font-size: var(--tamanho-fonte-media-mobile);
+    }
+
+    .project-links {
+        font-size: 0.9rem;
+    }
+
+    .project-links a.learn-more {
+        font-size: 0.95rem;
+    }
+}
+
