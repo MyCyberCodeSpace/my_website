@@ -1,0 +1,82 @@
+<div class="titulo_detalhe_documentacao">
+    <h1></h1>
+</div>
+
+<p>Wavely is a personal mobile app designed to let users add, manage, and stream custom audio content. Built with
+    Flutter, it offers a clean and intuitive interface, making it easy to organize and listen to your favorite audio
+    streams anytime, anywhere.</p>
+
+<div class="observacoes_detalhes_documentacao">
+    <h3>Overview</h3>
+    <ul>
+        <li><strong>Platform:</strong> iOS and Android (cross-platform)</li>
+        <li><strong>Technologies:</strong> Flutter, Dart, SQLite</li>
+        <li><strong>Development Context:</strong> Personal projects created through hands-on</li>
+    </ul>
+</div>
+
+<div class="subtitulo_detalhes_documentacao">
+    <h2>Applications Developed</h2>
+</div>
+
+
+<div class="conteduo_detalhes_documentacao">
+    <h3 class="h3_com_background">Online audio player</h3>
+
+    <p>This is a project that, although it won't be published on the Play Store due to the potential risk of misuse by
+        users and possible bureaucratic complications for me as the developer, is still a very interesting initiative
+        that touches on some highly relevant topics.</p>
+
+    <p>One of the main goals was to provide a great user experience. The app was designed to be practical and functional
+        for everyday use, with an intuitive interface and smooth navigation. One of the most technically interesting
+        aspects of the project is the state management of the audio libraries. I used <code>just_audio</code> and
+        <code>audio_service </code>to enable efficient background playback.
+    </p>
+
+    <p>These libraries were integrated with Riverpod, ensuring that all widgets depending on the player state are
+        updated synchronously and reactively, which contributes to the app’s overall stability and smoothness.</p>
+
+    <p>Below, you'll find some images showcasing the project. I’m happy to share more details via email if you're
+        interested.</p>
+
+    <h3 class="h3_subtitle">Key Concepts Applied</h3>
+
+    <ul>
+        <li>State management using <code>Riverpod</code> as the core architecture</li>
+        <li>Form validation across multiple user inputs</li>
+        <li>Using SQLite as the local <code>database</code></li>
+        <li>Page transitions implemented with <code>page_transition</code></li>
+        <li>Visual feedback during network events using loading indicators and UI elements such as
+            <code>ScaffoldMessenger</code>
+        </li>
+    </ul>
+
+    <img class="image_docs" src="/static/images/apresentacao/portifolio/flutter/audio01.png"
+        alt="app" onclick="openFullscreen(this)">
+
+    <img class="image_docs" src="/static/images/apresentacao/portifolio/flutter/audio02.png"
+        alt="app" onclick="openFullscreen(this)">
+
+
+</div>
+
+
+<div id="fullscreenModal" onclick="closeFullscreen()">
+    <span>&times;</span>
+    <img id="fullscreenImage" src="" alt="Fullscreen image">
+</div>
+
+<script>
+    function openFullscreen(imgElement) {
+        const modal = document.getElementById("fullscreenModal");
+        const modalImg = document.getElementById("fullscreenImage");
+        modal.style.display = "flex";
+        modalImg.src = imgElement.src;
+        modalImg.alt = imgElement.alt;
+    }
+
+    function closeFullscreen() {
+        const modal = document.getElementById("fullscreenModal");
+        modal.style.display = "none";
+    }
+</script>
