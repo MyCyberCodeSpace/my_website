@@ -1,7 +1,0 @@
-venv
-db.sqlite3
-mydrawing.svg
-nohup.out
-website
-.env
-.gitignore
