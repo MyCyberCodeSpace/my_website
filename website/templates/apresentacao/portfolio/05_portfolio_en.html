@@ -1,0 +1,258 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>GabDev - Portfolio</title>
+    {% include 'apresentacao/inicio/mainMetas.html' %}
+    <meta name="robots" content="index, follow" />
+
+    <link rel="stylesheet" href="{% static 'css/00_variables.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/01_global.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/02_menu.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/portfolio/05_portfolio.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/04_cabecalho.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/08_footer.css'%}" />
+
+</head>
+
+<body>
+
+
+    {% include 'apresentacao/inicio/swiitch.html' %}
+
+    <!-- ########################## -->
+    <!-- Menus                      -->
+    <!-- ########################## -->
+    {% include 'apresentacao/inicio/menu_desktop_en.html' %}
+    {% include 'apresentacao/inicio/menu_mobile_en.html' %}
+    <script>
+        window.onload = function () {
+            destacarMenus();
+        };
+
+        function destacarMenus() {
+
+            // Destacar o menu desktop
+            if (document.getElementById('menuportfolio')) {
+                document.getElementById('menuportfolio').classList.add('active');
+            }
+
+            // Destacar o menu mobile
+            if (document.getElementById('portfolio')) {
+                document.getElementById('portfolio').classList.add('active');
+            }
+        }
+    </script>
+
+
+    <!-- ########################## -->
+    <!-- Page Content               -->
+    <!-- ########################## -->
+    <div class="content">
+        {% include 'apresentacao/inicio/cabecalho_en.html' %}
+
+        <div class="container_portfolio">
+            <div class="grid-container">
+
+                <a href="/portfolio/reactive_architecture_for_audio_players" class="documentation-tag" data-categorias="tips">
+                    <div class="grid-item">
+                        <h4>Reactive architecture for audio players</h4>
+                        <img src="{% static 'images/apresentacao/portifolio/flutter/audio00.png' %}"
+                            alt="Neural Network Project" class="project-thumbnail">
+                        <p class="tech-stack">Key technologies: Dart, Flutter, SQLite, Riverpod, Audio service</p>
+                        <p class="project-links">
+                            Let users add, manage, and stream custom audio content.
+                        </p>
+                    </div>
+                </a>
+
+
+                <a href="/portfolio/cross-platform_apps" class="documentation-tag" data-categorias="tips">
+                    <div class="grid-item">
+                        <h4>Flutter Projects and Their Pillars</h4>
+                        <img src="{% static 'images/apresentacao/portifolio/flutter/flutter_apps.png' %}"
+                            alt="Neural Network Project" class="project-thumbnail">
+                        <p class="tech-stack">Key technologies: Dart, Flutter, Firebase, SQLite, Native devices
+                            features, REST APIs
+                            request</p>
+                        <p class="project-links">
+                            Cross-platform apps demonstrating key concepts such as state, data, and native integration.
+                        </p>
+                    </div>
+                </a>
+
+                <div class="grid-item">
+                    <h4>StoryTeller with AI</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/storyteller.png' %}"
+                        alt="Neural Network Project" class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Python, TensorFlow, NumPy, Matplotlib</p>
+
+                    <p class="project-links">
+                        <a href="https://panda2jz.gumroad.com/l/storyteller" target="_blank" class="learn-more">Gumroad
+                            Store</a>
+                        or watch the video on
+                        <a href="https://www.youtube.com/watch?v=oVXpVmxa5yU" target="_blank"
+                            class="learn-more">Youtube</a>.
+                    </p>
+                </div>
+
+                <div class="grid-item">
+                    <h4>Payment Integration with Stripe and AI Image Generator</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/ia_renovating.png' %}" alt="Stripe AI Project"
+                        class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Python, Django, JavaScript, Stripe API, OpenAI API</p>
+                    <p class="project-links">
+                        <a href="https://gabdeveloper.com/static/videos/saas_project.mp4" target="_blank"
+                            class="learn-more">View the Video</a>
+                    </p>
+
+                </div>
+
+                <div class="grid-item">
+                    <h4>Binary Classification Neural Network - Prostate Cancer</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/prostate_cancer.png' %}"
+                        alt="Neural Network Project" class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Python, TensorFlow, NumPy, Matplotlib</p>
+
+                    <p class="project-links">
+                        <a href="https://github.com/MyCyberCodeSpace/nn_prostate_cancer" target="_blank"
+                            class="learn-more">View
+                            on GitHub</a>
+                        or watch the video on
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7265483887605108736/"
+                            target="_blank" class="learn-more">LinkedIn</a>.
+                    </p>
+                </div>
+
+                <div class="grid-item">
+                    <h4>Monte Carlo Simulation</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/montecarlo.png' %}" alt="Monte Carlo Simulation"
+                        class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Python, Tkinter</p>
+                    <p class="project-links">
+                        <a href="https://panda2jz.gumroad.com/l/MonteCarloSimulation" target="_blank"
+                            class="learn-more">Gumroad Store</a>
+                        or watch the video on
+                        <a href="https://www.youtube.com/watch?v=-HTBRNcnn1o" target="_blank"
+                            class="learn-more">Youtube</a>.
+                    </p>
+                </div>
+
+                <div class="grid-item">
+                    <h4>Office Replacer - Automate Your Document Workflow</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/officereplacer.png' %}"
+                        alt="Office Replacer Project" class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Python, Tkinter</p>
+                    <p class="project-links">
+                        <a href="https://panda2jz.gumroad.com/l/office_replacer" target="_blank"
+                            class="learn-more">Gumroad Store</a>
+                        or watch the video on
+                        <a href="https://www.youtube.com/watch?v=GrTmyXIoVAw" target="_blank"
+                            class="learn-more">Youtube</a>.
+                    </p>
+
+                </div>
+
+                <div class="grid-item">
+                    <h4>Offline TTS for Anki and Automation</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/ankitts.png' %}" alt="Offline TTS Project"
+                        class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Python, TTS, Automation, Anki</p>
+                    <p class="project-links">
+                        <a href="https://panda2jz.gumroad.com/l/ankitts_english_version?layout=profile" target="_blank"
+                            class="learn-more">Gumroad Store</a>
+                        or watch the video on
+                        <a href="https://www.youtube.com/watch?v=dnzIUkJLZI8&t" target="_blank"
+                            class="learn-more">Youtube</a>.
+                    </p>
+                </div>
+
+                <div class="grid-item">
+                    <h4>Extract and analyze company data from Google Maps</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/extract.png' %}" alt="WordPress on VM Project"
+                        class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Pandas, BeuatifulSoup, Numpy</p>
+                    <a href="portfolio" target="_blank" class="learn-more">On-demand demo</a>
+                </div>
+
+                <div class="grid-item">
+                    <h4>WordPress site on VM, hosted on GitHub Pages</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/wordpress_vm.png' %}"
+                        alt="WordPress on VM Project" class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: WordPress, VirtualBox, GitHub Pages, Bash</p>
+                    <p class="project-links">
+                        <a href="https://github.com/MyCyberCodeSpace/dameta" target="_blank" class="learn-more">View on
+                            GitHub</a>
+                    </p>
+
+                </div>
+
+                <div class="grid-item">
+                    <h4>Pose and Hand Detection with MediaPipe</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/hand_pose.png' %}" alt="Hand Detection Project"
+                        class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Python, MediaPipe, OpenCV</p>
+
+                    <p class="project-links">
+                        <a href="https://github.com/MyCyberCodeSpace/python_hand_landmark" target="_blank"
+                            class="learn-more">View on GitHub</a>
+                    </p>
+                </div>
+
+                <div class="grid-item">
+                    <h4>Spaced Repetition Study Software</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/flashcard.png' %}" alt="Flashcard Project"
+                        class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Python, SQLite, Tkinter</p>
+
+                    <p class="project-links">
+                        <a href="https://github.com/MyCyberCodeSpace/flashcard" target="_blank" class="learn-more">View
+                            on
+                            GitHub</a>
+                    </p>
+                </div>
+
+                <div class="grid-item">
+                    <h4>Email Sending with Python</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/send_email.png' %}" alt="Email Sender Project"
+                        class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Python, SMTP, Automation</p>
+                    <p class="project-links">
+                        <a href="https://github.com/MyCyberCodeSpace/send_emails_with_python" target="_blank"
+                            class="learn-more">View on GitHub</a>
+                    </p>
+
+                </div>
+
+                <div class="grid-item">
+                    <h4>Automated Trading Lab</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/neo_trading.png' %}" alt="Trading Lab Project"
+                        class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Python, MQL5, Backtesting</p>
+                    <p class="project-links">
+                        <a href="https://github.com/MyCyberCodeSpace/neo" target="_blank" class="learn-more">View on
+                            GitHub</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        {% include 'apresentacao/inicio/rodape_en.html' %}
+        <!-- final div content-->
+    </div>
+
+    <!-- Colapsar conteudo -->
+    <script>const staticPath = "{% static '' %}";</script>
+    <script src="{% static 'scripts/00_rolar_tela.js' %}"></script>
+    <script src="{% static 'scripts/01_mudar_tema.js' %}"></script>
+    <script src="{% static 'scripts/02_mouse.js' %}"></script>
+    <script src="{% static 'scripts/03_menu_mobile.js' %}"></script>
+    <script src="{% static 'scripts/04_menu_idioma.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>GabDev - About</title>
+    {% include 'apresentacao/inicio/mainMetas.html' %}
+    <meta name="robots" content="index, follow" />
+
+    <link rel="stylesheet" href="{% static 'css/00_variables.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/01_global.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/02_menu.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/sobre/04_sobre.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/04_cabecalho.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/08_footer.css'%}" />
+
+</head>
+
+<body>
+
+    {% include 'apresentacao/inicio/swiitch.html' %}
+
+    <!-- ########################## -->
+    <!-- Menus                      -->
+    <!-- ########################## -->
+    {% include 'apresentacao/inicio/menu_desktop_en.html' %}
+    {% include 'apresentacao/inicio/menu_mobile_en.html' %}
+    <script>
+        window.onload = function () {
+            destacarMenus();
+        };
+
+        function destacarMenus() {
+
+            // Destacar o menu desktop
+            if (document.getElementById('menusobre')) {
+                document.getElementById('menusobre').classList.add('active');
+            }
+
+            // Destacar o menu mobile
+            if (document.getElementById('sobre')) {
+                document.getElementById('sobre').classList.add('active');
+            }
+        }
+    </script>
+
+
+    <!-- ########################## -->
+    <!-- Page Content               -->
+    <!-- ########################## -->
+    <div class="content">
+
+        {% include 'apresentacao/inicio/cabecalho_en.html' %}
+
+        <div class="container_sobre">
+            <div class="container_fazer_acontecer">
+                <h1 class="fazer_acontecer">IT'S <span>ABOUT </span>MAKING<br><span>IT HAPPEN<br></span>..</h1>
+            </div>
+
+            <div class="apresentacao">
+                <h3 id="typed-output"></h3>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var text = "Experienced programmer with a background in full-stack development, technical support, and team leadership. Currently focused on mobile cross-platform development (Flutter) and Python-based tools.";
+                    var outputElement = document.getElementById('typed-output');
+                    var index = 0;
+
+                    function type() {
+                        outputElement.textContent += text[index];
+                        index++;
+
+                        if (index < text.length) {
+                            setTimeout(type, 40);
+                        }
+                    }
+
+                    setTimeout(type, 500);
+                });
+
+            </script>
+
+            <div class="container_historia_gabdeveloper">
+                <div class="item_historia">
+                    <h3>ABOUT ME</h3>
+                </div>
+
+                <div class="detalhe_historia">
+                    <p>
+                        I'm a programmer and technology enthusiast, guided by the principles of the Zen of Python beyond
+                        this language...
+                        <em>"Explicit is better than implicit."</em>
+                    </p>
+                    <p>
+                        I hold a degree in Systems Analysis and Development, and my background spans from foundational
+                        tech areas—such as computer hardware and electronics—to more advanced topics like radio
+                        communication, Dart (Flutter), Python, Git, Django, Pandas, microcontrollers, data analysis, and
+                        MQL5.
+                    </p>
+
+                    <p>
+                        I offer tools on <a href="https://panda2jz.gumroad.com/" target="_blank">Gumroad</a>, publish
+                        apps on the <a href="https://play.google.com/store/apps/details?id=com.panda2jz.roll_the_dice" target="_blank">Play Store</a>, and share content on
+                        <a href="https://www.youtube.com/@Panda_2JZ" target="_blank">YouTube</a>.
+                    </p>
+
+                </div>
+            </div>
+
+            {% include 'apresentacao/sobre/04_tecnologias.html' %}
+
+            <div class="container_historia_gabdeveloper">
+                <div class="item_historia">
+                    <h3>TECHNICAL SKILLS:</h3>
+                </div>
+                <p>
+                    Here are some of the technologies I have worked with or have familiarity with:
+                </p>
+
+                <section>
+                    <ul>
+                        <li><strong>Cloud:</strong> DigitalOcean</li>
+                        <li><strong>Mobile:</strong> Flutter, Dart, REST APIs, Firebase (Auth, Firestore, Realtime DB,
+                            Storage, Messaging), State Management (Riverpod and BloC)</li>
+                        <li><strong>Back end:</strong> Python, SQL, Java, MQL5, Asterisk Dialplan, Bash</li>
+                        <li><strong>Front end:</strong> HTML, CSS, JavaScript</li>
+                        <li><strong>Technologies:</strong> Virtualization, Cloud Solutions, VOIP, PBX, SSH, Firewalls,
+                            ARM Architecture, DNS</li>
+                        <li><strong>Tools:</strong> Git, Django, Django Rest, Postgres, MySQL, Payment Checkout,
+                            Frameworks, API, Odoo, Nginx, WordPress, Matplotlib</li>
+                        <li><strong>Monitoring:</strong> Zabbix, Bash Scripts, Tcpdump, Wireshark</li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="containerBotao">
+                <a href="/portfolio" class='button_loja'>
+                    <div class="content_button_loja">Check the Portfolio</div>
+                    <span class="arrow-icon">➔</span>
+                </a>
+            </div>
+
+            <div class="container_historia_gabdeveloper">
+                <div class="item_historia">
+                    <h3>CONTACT:</h3>
+                    <div class='detalhe_historia'>
+                        <h5>I am available to establish a bridge of contact via
+                            <a href="mailto:gabdeveloper@protonmail.com?subject=Came from your website"
+                                target="_blank">gabdeveloper@protonmail.com</a>,
+                            or send me a message on <a href="https://www.linkedin.com/in/gks-developer/"
+                                target="_blank">Linkedin</a>.
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- final div container-sobre -->
+        </div>
+
+
+        {% include 'apresentacao/inicio/rodape_en.html' %}
+
+        <!-- final div content -->
+    </div>
+
+
+    <!-- Colapsar conteudo -->
+    <script>const staticPath = "{% static '' %}";</script>
+    <script src="{% static 'scripts/00_rolar_tela.js' %}"></script>
+    <script src="{% static 'scripts/01_mudar_tema.js' %}"></script>
+    <script src="{% static 'scripts/02_mouse.js' %}"></script>
+    <script src="{% static 'scripts/03_menu_mobile.js' %}"></script>
+    <script src="{% static 'scripts/04_menu_idioma.js' %}"></script>
+    <script src="{% static 'scripts/05_sobre_butoes.js' %}"></script>
+
+</body>
+
+</html>

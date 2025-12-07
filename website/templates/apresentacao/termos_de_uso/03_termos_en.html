@@ -1,0 +1,181 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>GabDev - Termo de Uso</title>
+    {% include 'apresentacao/inicio/mainMetas.html' %}
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="{% static 'css/00_variables.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/01_global.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/02_menu.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/termos/03_termos.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/04_cabecalho.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/08_footer.css'%}" />
+</head>
+
+<body>
+
+
+    {% include 'apresentacao/inicio/swiitch.html' %}
+
+    <!-- ########################## -->
+    <!-- Menus                      -->
+    <!-- ########################## -->
+    {% include 'apresentacao/inicio/menu_desktop_en.html' %}
+    {% include 'apresentacao/inicio/menu_mobile_en.html' %}
+    <script>
+        window.onload = function () {
+            destacarMenus();
+        };
+
+        function destacarMenus() {
+
+            // Destacar o menu desktop
+            if (document.getElementById('menuinicio')) {
+                document.getElementById('menuinicio').classList.add('active');
+            }
+
+            // Destacar o menu mobile
+            if (document.getElementById('inicio')) {
+                document.getElementById('inicio').classList.add('active');
+            }
+        }
+    </script>
+
+
+    <!-- ########################## -->
+    <!-- Page Content               -->
+    <!-- ########################## -->
+    <div class="content">
+
+        {% include 'apresentacao/inicio/cabecalho_en.html' %}
+        <div class="container_termos">
+            <div class="animacao_titulo">
+                <h2 class="termos_de_uso">TERMS <span>OF</span><br><span>USE</span></h2>
+            </div>
+
+            <div class="conteudo_termos_de_uso">
+                <h2>1. Terms of Use and Software Commercialization</h2>
+
+                <p>By purchasing and using the software provided by GabDeveloper, you agree to the following terms of
+                    use and commercialization. It is essential that you read and fully understand these terms before
+                    proceeding:</p>
+
+                <h3>1.1 Software License</h3>
+
+                <p>GabDeveloper grants you a limited, non-exclusive, and non-transferable license to use the purchased
+                    software strictly in accordance with these terms. This license may be revoked at any time due to a
+                    violation of these terms or non-compliance with GabDeveloper's established policies.</p>
+
+                <h3>1.2 Purchase and Payment</h3>
+
+                <p>The acquisition of software can only be made through affiliate platforms authorized by GabDeveloper,
+                    such as Hotmart or Amazon. Any acquisition or distribution outside these platforms is strictly
+                    prohibited and subject to legal action.</p>
+
+                <h3>1.3 Legal Penalties</h3>
+
+                <p>Selling, distributing, or disclosing purchased software outside the platforms authorized by
+                    GabDeveloper constitutes a serious violation of these terms. GabDeveloper reserves the right to take
+                    immediate legal action against any individual or entity involved in unlawful activities related to
+                    our software.</p>
+
+                <p>These actions may include, but are not limited to:</p>
+
+                <ol>
+                    <li>Seeking damages and losses;</li>
+                    <li>Seeking injunctions and court orders;</li>
+                    <li>Seeking compensation for moral damages;</li>
+                    <li>Seeking criminal measures as permitted by law;</li>
+                    <li>Immediate revocation of the software license without refund;</li>
+                    <li>Pursuing other legal actions available under applicable law.</li>
+                </ol>
+
+                <p>Additionally, GabDeveloper will fully cooperate with legal authorities in any investigation related
+                    to illegal or unauthorized activities involving our software.</p>
+
+                <h3>1.4 Support and Updates</h3>
+
+                <p>Purchased software includes technical support for 90 days from the date of acquisition. This support
+                    does not cover the implementation of new features or performance improvements. Updates will be made
+                    available at GabDeveloper's sole discretion.</p>
+
+                <h2>2. Software Usage Restrictions</h2>
+                <p>By using our software, you expressly agree not to:</p>
+
+                <ol>
+                    <li>Modify, adapt, or translate the software;</li>
+                    <li>Create derivative works based on the software;</li>
+                    <li>Distribute, sublicense, rent, or lend the software to third parties;</li>
+                    <li>Perform reverse engineering, decompile, or disassemble the software;</li>
+                    <li>Remove or alter any copyright or proprietary notices contained in the software;</li>
+                    <li>Use the software for any illegal purpose or in violation of these terms.</li>
+                </ol>
+
+                <h2>3. Software Responsibilities</h2>
+                <p>You are responsible for maintaining the confidentiality of any account information and for all
+                    activities that occur under your account. GabDeveloper will not be responsible for any loss or
+                    damage resulting from non-compliance with these terms or misuse of the software.</p>
+
+                <h2>4. Changes to Software Terms</h2>
+                <p>GabDeveloper reserves the right to modify these terms of use and commercialization at any time.
+                    Significant changes will be communicated through appropriate notification. Continued use of the
+                    software after such modifications constitutes acceptance of the revised terms.</p>
+
+                <h2>5. GabDeveloper Website</h2>
+                <p>The GabDeveloper website, accessible at <a href="https://gabdeveloper.com"
+                        class="link">https://gabdeveloper.com</a>, is a platform dedicated to the commercialization of
+                    high-quality software. By accessing and using this website, you agree to comply with the following
+                    specific Terms of Use for the GabDeveloper website:</p>
+
+                <h4>5.1 Website Content</h4>
+                <p>The content on the GabDeveloper website, including text, graphics, logos, images, and software, is
+                    protected by copyright and other intellectual property laws. Unauthorized use of this content may
+                    violate copyright and trademark laws.</p>
+
+                <h4>5.2 Access and Account</h4>
+                <p>To access certain areas of the GabDeveloper website, you may be required to provide registration
+                    information. It is the user's responsibility to maintain the confidentiality of this information and
+                    assume full responsibility for all activities carried out through their account.</p>
+
+                <h4>5.3 External Links</h4>
+                <p>The GabDeveloper website may contain links to third-party websites. GabDeveloper does not control or
+                    assume responsibility for the content, privacy policies, or practices of third-party websites. Use
+                    of these links is at the user's own risk.</p>
+
+                <h4>5.4 Changes to Website Terms</h4>
+                <p>GabDeveloper reserves the right to modify the specific Terms of Use for the website at any time.
+                    Significant changes will be communicated through notifications on the website. Continued use of the
+                    website after such modifications constitutes acceptance of the revised terms.</p>
+
+                <h2>6. Conclusion</h2>
+                <p>These terms of use and commercialization represent the entire agreement between you and GabDeveloper
+                    regarding the provided software or use of our website. If you have any questions or concerns, please
+                    contact us before proceeding.</p>
+            </div>
+        </div>
+
+        {% include 'apresentacao/inicio/rodape_en.html' %}
+
+        <!-- final div content     -->
+    </div>
+
+
+
+
+
+    <script>const staticPath = "{% static '' %}";</script>
+    <script src="{% static 'scripts/00_rolar_tela.js' %}"></script>
+    <script src="{% static 'scripts/01_mudar_tema.js' %}"></script>
+    <script src="{% static 'scripts/02_mouse.js' %}"></script>
+    <script src="{% static 'scripts/03_menu_mobile.js' %}"></script>
+    <script src="{% static 'scripts/04_menu_idioma.js' %}"></script>
+
+
+</body>
+
+</html>
